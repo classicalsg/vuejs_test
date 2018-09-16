@@ -28,6 +28,9 @@ app.get('/posts', (req, res) => {
 })
 
 app.post('/add_post', (req, res) => {
+    console.log("**********")
+    console.log(req.body)
+    console.log("**********")    
     var db = req.db;
     var title = req.body.title;
     var description = req.body.description;
@@ -44,6 +47,7 @@ app.post('/add_post', (req, res) => {
             success: true
         })
     })
+
 })
 
 app.put('/posts/:id', (req, res) => {
